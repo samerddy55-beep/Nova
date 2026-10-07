@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>نوفا | مساعد المعلم</title>
+<link rel="icon" href="logo.svg">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header id="hdr"></header>
+<main>
+  <h1>حضّر درسك وامتحانك في دقائق</h1>
+  <p class="lead">اختر نوع الطلب أو اكتبه بكلماتك، وعدّل الأقواس حسب صفك ومادتك.</p>
+  <div class="quick">
+    <button class="alt" onclick="tpl('حضّر لي درس [اسم الدرس] لصف [الصف] مادة [المادة]، مدة الحصة 45 دقيقة.')">تحضير درس</button>
+    <button class="alt" onclick="tpl('اعمل لي امتحان [عدد] علامة على درس [اسم الدرس] لصف [الصف] مع نموذج الإجابة وسلم العلامات.')">امتحان</button>
+    <button class="alt" onclick="tpl('اعمل لي خطة فصلية لمادة [المادة] لصف [الصف].')">خطة فصلية</button>
+    <button class="alt" onclick="tpl('اعمل لي ورقة عمل على درس [اسم الدرس] لصف [الصف].')">ورقة عمل</button>
+  </div>
+  <div id="chat" aria-live="polite"></div>
+  <div class="row">
+    <textarea id="q" rows="3" placeholder="اكتب طلبك هنا"></textarea>
+    <button onclick="go()">إرسال</button>
+  </div>
+  <p style="text-align:center"><button class="alt" onclick="resetChat()">محادثة جديدة</button></p>
+</main>
+<footer id="ftr"></footer>
+<script src="config.js"></script>
+<script src="layout.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
